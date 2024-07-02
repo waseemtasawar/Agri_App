@@ -24,7 +24,7 @@ const BankLoanInfo = ({navigation}) => {
           <Text style={styles.buttonText}>Explore Available Loans</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={[styles.button, {backgroundColor: '#E91E63'}]} // Pink button for insurance
+          style={[styles.button, {backgroundColor: '#E91E63'}]}
           onPress={() => navigation.navigate('InsuranceScreen')}>
           <Text style={styles.buttonText}>Discover Insurance Options</Text>
         </TouchableOpacity>

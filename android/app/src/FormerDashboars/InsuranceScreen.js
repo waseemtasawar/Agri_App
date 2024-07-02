@@ -34,25 +34,28 @@ const InsuranceScreen = ({navigation}) => {
           policyDetails:
             'یہ اسکیم زراعتی برادری کو قدرتی آفات کے باعث ہونے والے نقصانات سے بچانے کے لیے بنائی گئی ہے۔\n\nیہ پانچ بڑی فصلوں یعنی گندم، کپاس، چاول، گنا اور مکئی کے تمام زرعی پیداوار کے قرضوں کے لیے قابل اطلاق اور لازمی ہے۔\n\nوفاقی حکومت مستحق قرض دہندگان کے لیے فی فصل فی موسم کے پریمیم کی قیمت برداشت کرتی ہے۔\n\nوہ قرض دہندگان جن کی زمین کی ملکیت 25 ایکڑ تک (بلوچستان کی صورت میں 32 ایکڑ تک) ہو، اس اسکیم کے تحت مستحق ہیں۔\n\nانشورنس قدرتی آفات جیسے زیادہ بارش، اولوں کا طوفان، کہر، سمندری طوفان، سیلاب، خشک سالی، اور فصل کی بیماریاں، کیڑوں کا حملہ وغیرہ کو شامل کرتی ہے۔',
           policyLink: 'https://www.sbp.org.pk/Incen-others/Agri-1.asp',
-          policyImage: "require('../Images/sun.png')",
+          policyImage: require('../Images/sun.png'),
         },
       ],
     },
     {
-      insuranceProvider: 'اور دیگر شعبوں کے لیے سکیمیں SMEs ',
+      insuranceProvider: 'انڈیکس انشورنس فورم',
       policies: [
         {
           policyId: 'insc1',
-          policyName: 'Special Life Insurance',
-          policyDetails: 'Life insurance with special rates for farmers.',
-          policyLink: 'https://www.insurancec.com/policy/1',
+          policyName: 'زرعی انشورنس پروگرام - اسمارٹ پنجاب پاکستان',
+          policyDetails:
+            'جی آئی آئی ایف پاکستان میں عالمی بینک گروپ کے سمارٹ پنجاب (زرعی اور دیہی تبدیلی کے لیے مارکیٹس کو مضبوط بنانے کے لیے) پروگرام کا حصہ ہے، جو پنجاب صوبے میں فصل اور مویشیوں کے کسانوں کی پیداواریت بڑھانے، ان کی موسمی حالات کی مزاحمت میں بہتری لانے اور زرعی کاروبار کی ترقی کو فروغ دینے کے لیے بنایا گیا ہے۔\n\nسمارٹ پنجاب، جو کہ آئی بی آر ڈی کے پانچ سالہ (2018-2023) کے US$ 300 ملین قرض سے معاون ہے، تین اہم ستونوں پر مبنی ہے: 1) فصل اور مویشیوں کے چھوٹے کسانوں کی پیداواریت اور آمدنی بڑھانا بشمول خواتین کسان، 2) زرعی پیداوار میں اضافی قیمت بڑھانا، اور 3) موسمی تبدیلی اور قدرتی آفات کے خلاف کسانوں کی مزاحمت کو بہتر بنانا۔',
+          policyLink:
+            'https://www.indexinsuranceforum.org/agriculture-insurance-program-smart-punjab-pakistan',
           policyImage: require('../Images/sun.png'),
         },
         {
-          policyId: 'insc2',
-          policyName: 'Vehicle Insurance',
-          policyDetails: 'Vehicle insurance for farm equipment.',
-          policyLink: 'https://www.insurancec.com/policy/2',
+          policyId: 'insd1',
+          policyName: 'میزان بینک ٹریکٹر آسان فنانس',
+          policyDetails:
+            'میزان بینک مشینی زراعت کے لیے ٹریکٹرز حاصل کرنے کے لیے شریعت کے مطابق پروڈکٹ فراہم کرتا ہے۔\n\nمیزان ٹریکٹر آسان فنانس دستیاب ہے:\n\nانفرادی کسانوں (فارم اور غیر فارم)\nکارپوریٹ فارمنگ کے لیے ٹریکٹرز کی ضرورت\nفنانسنگ کی مدت 3 سے 5 سال ہے۔\n\nادائیگی کی فریکوئنسی ماہانہ، سہ ماہی یا نصف سالانہ ہو سکتی ہے۔',
+          policyLink: 'https://www.meezanbank.com/agricultural-finance',
           policyImage: require('../Images/sun.png'),
         },
       ],

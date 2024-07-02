@@ -7,7 +7,10 @@ import {
   ScrollView,
   Image,
   ImageBackground,
+  Dimensions,
 } from 'react-native';
+
+const {width, height} = Dimensions.get('window');
 
 const LoansScreen = ({navigation}) => {
   const banks = [
@@ -106,7 +109,6 @@ const LoansScreen = ({navigation}) => {
         },
       ],
     },
-    // Add more banks as needed
   ];
 
   return (
@@ -125,7 +127,12 @@ const LoansScreen = ({navigation}) => {
                 style={styles.loanContainer}
                 onPress={() => navigation.navigate('LoanDetails', {loan})}>
                 <Image source={loan.loanImage} style={styles.image} />
-                <Text style={styles.loanName}>{loan.loanName}</Text>
+                <Text
+                  style={styles.loanName}
+                  numberOfLines={1}
+                  ellipsizeMode="tail">
+                  {loan.loanName}
+                </Text>
               </TouchableOpacity>
             ))}
           </View>
@@ -143,34 +150,34 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   container: {
-    paddingHorizontal: 8,
-    paddingTop: 20,
-    paddingBottom: 50, // Added padding to ensure content is not hidden under the bottom navigation bar
+    flex: 1,
+    paddingHorizontal: width * 0.01,
   },
   sectionHeader: {
-    fontSize: 28,
+    fontSize: width * 0.06,
     fontWeight: 'bold',
-    marginBottom: 20,
+    marginTop: height * 0.02,
+    marginBottom: height * 0.01,
     textAlign: 'center',
-    color: '#FFF', // White text color
+    color: '#4b830d',
   },
   bankContainer: {
-    marginBottom: 20,
-    backgroundColor: 'rgba(255, 255, 255, 0.8)', // Light transparent background
+    marginBottom: height * 0.02,
+    backgroundColor: '#fff',
     borderRadius: 10,
-    padding: 15,
+    padding: width * 0.04,
     elevation: 3,
   },
   bankName: {
-    fontSize: 24,
+    fontSize: width * 0.06,
     fontWeight: 'bold',
-    marginBottom: 10,
+    marginBottom: height * 0.01,
     color: '#2c3e50',
     textAlign: 'center',
   },
   loanContainer: {
-    marginBottom: 15,
-    padding: 15,
+    marginBottom: height * 0.015,
+    padding: width * 0.04,
     backgroundColor: '#FFF',
     borderRadius: 8,
     borderWidth: 1,
@@ -179,23 +186,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   loanName: {
-    fontSize: 20,
+    fontSize: width * 0.045,
     fontWeight: 'bold',
     color: '#3498db',
-  },
-  loanDetails: {
-    fontSize: 16,
-    color: '#7f8c8d',
-    marginTop: 5,
+    flexShrink: 1,
   },
   image: {
-    width: 50,
-    height: 50,
-    borderRadius: 25,
-    marginRight: 10,
-  },
-  textContainer: {
-    flex: 1,
+    width: width * 0.12,
+    height: width * 0.12,
+    borderRadius: (width * 0.12) / 2,
+    marginRight: width * 0.025,
   },
 });
 
